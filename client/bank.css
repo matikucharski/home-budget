@@ -1,0 +1,62 @@
+body{
+	background-color: rgb(92, 92, 189);
+	color: #131366;
+}
+
+#calendar{
+	max-width: 1200px;
+	margin: 0 10%;
+}
+#calendar .fc-content{
+	background-color: rgba(245, 245, 245, 0.46);
+	background-color: rgb(156, 156, 211);
+}
+thead {
+    background-color: rgb(129, 115, 185);
+}
+
+h1{
+	text-align: center;
+}
+
+#inputs{
+	margin: 0 10%;
+}
+#inputs .mobile-input{
+	/*display: block;
+	display: inline-block;
+	margin: 5px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;*/
+	opacity: 0.9;
+	-moz-transition: opacity 0.3s;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+#inputs input.mobile-input, 
+#inputs textarea.mobile-input{
+	/*border: 2px solid;
+	padding: 4px;*/
+}
+#inputs input.mobile-input:focus, 
+#inputs textarea.mobile-input:focus{
+	/*-moz-box-shadow: 0px 0px 3px;
+	-webkit-box-shadow: 0px 0px 3px;
+	box-shadow: 0px 0px 3px;*/
+}
+
+#inputs .mobile-input:focus,
+#inputs .mobile-input:active{
+	opacity: 1;
+}
+#inputs > .inputs-container {
+    /*position: relative; 
+    display: inline-block;*/
+}
+#inputs textarea.mobile-input{
+	height: 154px;
+	background-image: url(bg.jpg);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
