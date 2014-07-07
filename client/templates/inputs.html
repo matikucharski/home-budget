@@ -1,19 +1,24 @@
 <template name="inputs">
-	<div id="inputs" class="visible-xs-block form-horizontal">
-		<div class="inputs-container">
+	<div id="inputs" class="visible-xs-blockDIS form-horizontal">
+		<form class="inputs-container">
 			<div class="form-group">
 				<div class="input-group">
-					<input class="mobile-input form-control" type="number" placeholder="za ile?" min="0" name="ileKosztowalo" autofocus required> 
+					<input id="cena-input" class="mobile-input form-control" type="number" placeholder="za ile?" min="0" name="ileKosztowalo" autofocus required> 
 					<span class="input-group-addon">zł</span>
 					<!-- <span style="position: absolute; right: -17px; bottom: 7px;">zł</span> -->
 				</div>
 			</div>
 			<div class="form-group">
-				<textarea class="mobile-input form-control" placeholder="co kupione?" name="coKupione" rows="3" autocomplete></textarea>
+				<textarea id="opis-input" class="mobile-input form-control" placeholder="co kupione?" name="coKupione" rows="3" autocomplete></textarea>
 			</div>
 			<div class="form-group">
-				<button id="zapisz" class="btn btn-primary form-control" type="button">ZAPISZ</button>
+				<button id="zapisz" class="btn btn-primary form-control" type="submit">ZAPISZ</button>
 			</div>
-		</div>
+		</form>
+		<ul>
+			{{#each wydatki}}
+			<li>{{cena}} zł za {{opis}}</li>
+			{{/each}}
+		</ul>
 	</div>
 </template>

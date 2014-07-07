@@ -50,10 +50,7 @@ h1{
 #inputs .mobile-input:active{
 	opacity: 1;
 }
-#inputs > .inputs-container {
-    /*position: relative; 
-    display: inline-block;*/
-}
+
 #inputs textarea.mobile-input{
 	height: 154px;
 	background-image: url(bg.jpg);
