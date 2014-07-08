@@ -15,9 +15,8 @@ Template.inputs.events({
 					start: Spendings.findOne({_id: id}).timestamp
 				},
 				function(){
-					calendarEventDep.changed();
-					$('#calendar').fullCalendar('rerenderEvents');
-					// $('#calendar').fullCalendar( 'addEventSource', CalendarEvents.find({}).fetch() )
+					// $('#calendar').fullCalendar( 'refetchEvents' );
+					console.log('event inserted into callendar function');
 				});
 			}
 		}
