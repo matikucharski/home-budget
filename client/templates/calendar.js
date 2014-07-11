@@ -31,7 +31,10 @@ Template.calendar.rendered = function () {
 				}
 			});
 
-    	}
+    	},
+        eventClick: function(calEvent, jsEvent, view) {
+            $(this).popover({content: calEvent.title+"<br />"+calEvent.cena+"zł", placement: "bottom", trigger: 'manual', html: true});
+            $(this).popover('toggle');
+        }
 	});
 }
-// TODO improve performance - now it refetches multiple times while changing renderView

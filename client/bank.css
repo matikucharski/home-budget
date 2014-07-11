@@ -14,6 +14,12 @@ body{
 thead {
     background-color: rgb(129, 115, 185);
 }
+#calendar .popover-content{
+	font-size: 80%;
+}
+#calendar div.fc-event{
+	cursor: pointer;
+}
 
 h1{
 	text-align: center;
@@ -22,6 +28,7 @@ h1{
 #inputs{
 	margin: 0 10%;
 }
+
 #inputs .mobile-input{
 	/*display: block;
 	display: inline-block;
@@ -30,7 +37,6 @@ h1{
 	-webkit-border-radius: 8px;
 	border-radius: 8px;*/
 	opacity: 0.9;
-	-moz-transition: opacity 0.3s;
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 }

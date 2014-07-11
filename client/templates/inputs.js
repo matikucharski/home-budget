@@ -7,17 +7,21 @@ Template.inputs.events({
 			timestamp: new Date()
 		}, 
 		function(error, id){
-			if (typeof id !== undefined){
+			if (id){
 				console.log("inserted!", id, error);
 
 				CalendarEvents.insert({
 					title: Spendings.findOne({_id: id}).opis,
-					start: Spendings.findOne({_id: id}).timestamp
+					start: Spendings.findOne({_id: id}).timestamp,
+					cena: Spendings.findOne({_id: id}).cena
 				},
 				function(){
 					// $('#calendar').fullCalendar( 'refetchEvents' );
 					console.log('event inserted into callendar function');
 				});
+			}
+			else{
+				$('#inputs').find('form').after('<div class="alert alert-warning alert-dismissible fade in" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><strong>Uwaga!</strong> Wprowadzona cena jest nieprawidłowa.</div>');
 			}
 		}
 		);
